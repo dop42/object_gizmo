@@ -1,3 +1,8 @@
+[![](https://badges.5metrics.dev/object_gizmo/serverRank.svg?style=for-the-badge)](https://5metrics.dev/resource/object_gizmo)
+[![](https://badges.5metrics.dev/object_gizmo/servers.svg?style=for-the-badge)](https://5metrics.dev/resource/object_gizmo)
+[![](https://badges.5metrics.dev/object_gizmo/players.svg?style=for-the-badge)](https://5metrics.dev/resource/object_gizmo)
+
+
 # Object Gizmo Module
 
 This module exports a `useGizmo` function that enables manipulation of entity position and rotation.
