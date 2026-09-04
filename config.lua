@@ -20,3 +20,7 @@ Config.pedAlpha = 200
 -- Allow scaling mode ([S] key).
 -- Note: scaling does not affect collisions and resets once physics are applied.
 Config.enableScale = false
+
+-- Enable the debug tooling (the /testGizmo command).
+-- Leave this off on a live server: the command lets any player spawn objects.
+Config.debug = false
