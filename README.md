@@ -68,10 +68,6 @@ Config.pedAlpha = 200                                       -- peds can't be out
 Config.enableScale = false                                  -- enable Scale Mode ([S])
 ```
 
-Restart the resource after editing the file.
-
-> The colours of the gizmo axis arrows themselves are drawn by the game engine and cannot be changed; `outlineColor` controls the highlight around the entity being edited.
-
 ## Controls
 
 While using the gizmo, the following controls apply:
