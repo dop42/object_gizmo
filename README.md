@@ -32,7 +32,7 @@ local result = exports.object_gizmo:useGizmo(handle)
 
 ## Test Command
 
-This module includes a test command `testGizmo` that demonstrates how to use the gizmo. 
+This module includes a test command `testGizmo` that demonstrates how to use the gizmo.
 
 The command creates an object at the player's location and then activates the gizmo for that object.
 
@@ -63,3 +63,9 @@ The current mode (Translate/Rotate) will be displayed on the screen.
 ## Note
 
 The gizmo only works on entities that you have sufficient permissions to manipulate. Make sure you have the correct permissions to move or rotate the entity you are working with.
+
+## Credits
+
+- [Andyyy7666](https://github.com/overextended/ox_lib/pull/453)
+- [AvarianKnight](https://forum.cfx.re/t/allow-drawgizmo-to-be-used-outside-of-fxdk/5091845/8?u=demi-automatic)
+- [citizenfx](https://github.com/citizenfx/lua/blob/luaglm-dev/cfx/libs/scripts/examples/dataview.lua) — `client/dataview.lua`
