@@ -1,6 +1,5 @@
 local dataview = require 'client.dataview'
 
-local enableScale = Config.enableScale -- allow scaling mode. doesnt scale collisions and resets when physics are applied it seems
 local isCursorActive = false
 local gizmoEnabled = false
 local currentMode = 'translate'
@@ -69,7 +68,7 @@ local function applyEntityMatrix(entity, view)
 	local x3, y3, z3 = view:GetFloat32(32), view:GetFloat32(36), view:GetFloat32(40)
 	local tx, ty, tz = view:GetFloat32(48), view:GetFloat32(52), view:GetFloat32(56)
 
-	if not enableScale then
+	if not Config.enableScale then
 		x1, y1, z1 = normalize(x1, y1, z1)
 		x2, y2, z2 = normalize(x2, y2, z2)
 		x3, y3, z3 = normalize(x3, y3, z3)
@@ -168,7 +167,7 @@ local function textUILoop()
 		while gizmoEnabled do
 			Wait(100)
 
-			local scaleText = (enableScale and '[S] - ' .. locale("scale_mode") .. '  \n') or ''
+			local scaleText = (Config.enableScale and '[S] - ' .. locale("scale_mode") .. '  \n') or ''
 			local modeLine = 'Current Mode: ' .. currentMode .. ' | ' .. (isRelative and 'Relative' or 'World') .. '  \n'
 
 			lib.showTextUI(
@@ -285,7 +284,7 @@ lib.addKeybind({
 	end,
 })
 
-if enableScale then
+if Config.enableScale then
 	lib.addKeybind({
 		name = '_gizmoScale',
 		description = locale("scale_mode_description"),
