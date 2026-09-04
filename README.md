@@ -57,6 +57,21 @@ Available: `cs`, `de`, `en`, `es`, `fr`, `it`, `nl`, `pl`, `pt-br`, `ru`, `sv`, 
 To add one, copy `locales/en.json` to `locales/<code>.json` and translate the values. The manifest
 globs `locales/*.json`, so no other change is needed.
 
+## Configuration
+
+The `config.lua` file at the root of the resource lets you change how the gizmo looks:
+
+```lua
+Config.outlineColor = { r = 255, g = 255, b = 255, a = 255 } -- highlight colour (RGBA, 0-255)
+Config.outlineShader = 0                                    -- 0 = hard edge, 1 = softer/filled edge
+Config.pedAlpha = 200                                       -- peds can't be outlined, they fade instead (0-255)
+Config.enableScale = false                                  -- enable Scale Mode ([S])
+```
+
+Restart the resource after editing the file.
+
+> The colours of the gizmo axis arrows themselves are drawn by the game engine and cannot be changed; `outlineColor` controls the highlight around the entity being edited.
+
 ## Controls
 
 While using the gizmo, the following controls apply:

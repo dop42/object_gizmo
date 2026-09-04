@@ -1,6 +1,6 @@
 local dataview = require 'client.dataview'
 
-local enableScale = false -- allow scaling mode. doesnt scale collisions and resets when physics are applied it seems
+local enableScale = Config.enableScale -- allow scaling mode. doesnt scale collisions and resets when physics are applied it seems
 local isCursorActive = false
 local gizmoEnabled = false
 local currentMode = 'translate'
@@ -99,8 +99,11 @@ local function gizmoLoop(entity)
 	isCursorActive = true
 
 	if IsEntityAPed(entity) then
-		SetEntityAlpha(entity, 200)
+		SetEntityAlpha(entity, Config.pedAlpha)
 	else
+		local color = Config.outlineColor
+		SetEntityDrawOutlineColor(color.r, color.g, color.b, color.a)
+		SetEntityDrawOutlineShader(Config.outlineShader)
 		SetEntityDrawOutline(entity, true)
 	end
 
