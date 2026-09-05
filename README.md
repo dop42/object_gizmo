@@ -48,6 +48,15 @@ RegisterCommand('testGizmo', function()
 end)
 ```
 
+## Locales
+
+Set the language with the `ox:locale` convar in your `server.cfg`, e.g. `setr ox:locale "de"`.
+
+Available: `cs`, `de`, `en`, `es`, `fr`, `it`, `nl`, `pl`, `pt-br`, `ru`, `sv`, `tr`.
+
+To add one, copy `locales/en.json` to `locales/<code>.json` and translate the values. The manifest
+globs `locales/*.json`, so no other change is needed.
+
 ## Controls
 
 While using the gizmo, the following controls apply:
